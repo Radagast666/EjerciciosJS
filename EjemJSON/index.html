@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de conversión JSON</title>
+</head>
+<body>
+
+    <label for="">Matricula: </label>
+    <input type="text" id="matricula">
+
+    <label for="">Nombre: </label>
+    <input type="text" id="nombre">
+
+    <label for="">Carrera: </label>
+    <input type="text" id="carrera">
+
+    <button  onclick="convertObjToJson()"> Convertir Obj to JSON </button>
+    
+    <div id="myjson">aca va el json</div>
+
+    <button onclick="convertJsonToObj()"> Convertir JSON a Obj </button>
+
+    <div id="newMatricula">matricula</div>
+    <div id="newNombre">nombre</div>
+    <div id="newCarrera">carrera</div>
+
+    <script src="JSON.js"></script>
+    
+</body>
+</html>

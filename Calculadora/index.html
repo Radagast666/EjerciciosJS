@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+ 
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+ 
+ <title>Mini calculadora en JavaScript</title>
+ 
+<script>
+function calcula(operacion){
+    var operando1 = document.calc.operando1.value;
+    var operando2 = document.calc.operando2.value;
+    var result = 0;
+    if (operacion=='+' || operacion=='-'  || operacion=='*' || operacion=='/' )   {
+      result = eval(operando1 + operacion + operando2);
+    }
+    if (operacion=='^'){
+       result = operando1 * operando1;    
+    }
+    if (operacion=='I'){
+       result = eval(1 / operando1);    
+    }
+    if (operacion=='R'){
+       result = eval(sqrt(operando1));    
+    }
+    if (operacion=='F'){
+       result = eval(Math.floor(operando1));    
+    }    
+    if (operacion=='E'){
+       result = eval(Math.pow(operando1 , operando2));    
+    }   
+ 
+    document.calc.resultado.value = result;
+}
+</script> 
+ 
+</head>
+<body>
+ 
+<form name="calc">
+<input type="Text" name="operando1" value="0" size="12">
+<br>
+<input type="Text" name="operando2" value="0" size="12">
+<br>
+<input type="Button" name="" value=" + " onclick="calcula('+')">
+<input type="Button" name="" value=" - " onclick="calcula('-')">
+<input type="Button" name="" value=" X " onclick="calcula('*')">
+<input type="Button" name="" value=" / " onclick="calcula('/')">
+<input type="Button" name="" value=" x^2 " onclick="calcula('^')">
+<input type="Button" name="" value=" 1/x " onclick="calcula('I')">
+<input type="Button" name="" value=" sqrt(x) " onclick="calcula('R')">
+<input type="Button" name="" value=" Math.floor " onclick="calcula('F')">
+<input type="Button" name="" value=" x^y " onclick="calcula('E')">
+<br>
+Resultado:
+<br>
+<input type="Text" name="resultado" value="0" size="12">
+</form> 
+ 
+</body>
+</html>
